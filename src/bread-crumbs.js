@@ -26,20 +26,6 @@ const BreadCrumbs = ({ routeConfigs }) => {
         }
     }, [pathname, routeConfigs]);
 
-    // useEffect(() => {
-    //     window.onbeforeunload = () => {
-    //         localStorage.setItem('breadCrumbs', JSON.stringify(historyRecords));
-    //     };
-    //     window.onload = () => {
-    //         setHistoryRecords(JSON.parse(localStorage.getItem('breadCrumbs')));
-    //     };
-
-    //     return () => {
-    //         window.onbeforeunload = null;
-    //         window.onload = null;
-    //     }
-    // }, [historyRecords]);
-
     const handleClick = (pathname) => {
         history.push(pathname);
     }
